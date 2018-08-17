@@ -8,7 +8,7 @@ import jade.lang.acl.*;
 public class Sender extends Agent {
 	protected void setup() {
 		
-		addBehaviour(new TickerBehaviour(this, 1000) {
+		addBehaviour(new TickerBehaviour(this, 1500) {
 			@Override
 			protected void onTick() {
 				ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
