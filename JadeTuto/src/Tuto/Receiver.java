@@ -11,7 +11,7 @@ public class Receiver extends Agent {
 				ACLMessage msg = receive();
 				if (msg != null) {
 					System.out.println("PingPong : - " + myAgent.getLocalName() + " <- " + msg.getContent());
-					
+
 					ACLMessage reply = msg.createReply();
 					reply.setPerformative(ACLMessage.INFORM);
 					reply.setContent(" Pong");

@@ -17,7 +17,7 @@ public class AMSLister extends Agent {
 			System.out.println("Erreur " + e);
 			e.printStackTrace();
 		}
-		
+
 		System.out.println("----- Agent AMS Lister ----- ");
 		for (int i = 0; i < agents.length; i++) {
 			AID agentID = agents[i].getName();

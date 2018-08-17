@@ -7,7 +7,7 @@ import jade.lang.acl.*;
 
 public class Sender extends Agent {
 	protected void setup() {
-		
+
 		addBehaviour(new TickerBehaviour(this, 1500) {
 			@Override
 			protected void onTick() {
@@ -18,13 +18,12 @@ public class Sender extends Agent {
 			}
 		});
 
-		
-		
 		addBehaviour(new CyclicBehaviour(this) {
 			public void action() {
 				ACLMessage msg = receive();
 				if (msg != null)
-					System.out.println("PingPong : = Answer" + " <- " + msg.getContent() + " from " + msg.getSender().getName());
+					System.out.println(
+							"PingPong : = Answer" + " <- " + msg.getContent() + " from " + msg.getSender().getName());
 				block();
 			}
 		});
