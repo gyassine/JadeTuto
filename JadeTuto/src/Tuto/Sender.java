@@ -24,7 +24,7 @@ public class Sender extends Agent {
 			public void action() {
 				ACLMessage msg = receive();
 				if (msg != null)
-					System.out.println("== Answer" + " <- " + msg.getContent() + " from " + msg.getSender().getName());
+					System.out.println("PingPong : = Answer" + " <- " + msg.getContent() + " from " + msg.getSender().getName());
 				block();
 			}
 		});
